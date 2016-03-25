@@ -1,0 +1,178 @@
+﻿  .loginPanel {              /*整个面板*/
+            width: 380px;
+            height: 247px;
+            left: 400px;
+            top: 120px;
+            position: absolute;   /*绝对定位*/
+            border: 1px solid #ccc;
+            background: #f6f6f6;
+            -moz-border-radius: 10px;    
+            -webkit-border-radius: 10px;
+            border-radius: 10px;      /*三种圆角方式，border-radius适用于chrome*/
+            -moz-box-shadow: 0 0 8px #000;
+            -webkit-box-shadow: 0 0 8px #000;
+            box-shadow: 0 0 8px #000;  /*为边框添加阴影*/
+        }
+
+
+        .login_logo_webqq {   /*QQ图标*/
+            background: url('../images/login_window_logo.png') no-repeat -210px -0px;
+            /*选取图片中的企鹅*/
+            margin-left: 100px;
+            margin-top: 10px;
+            width: 200px; 
+            height: 44px; /*放置的图片区域的大小*/
+            cursor: move;  /*cursor属性规定要显示的光标的类型（形状）*/
+        }
+
+
+        .inputs {
+            font: bold 15px arial;
+            margin-left: 80px;
+            margin-top: 30px;
+            /*块级元素的margin的参照基准是前一个元素即相对于自身之前的元素有margin距离。如果元素是第一个元素，则就是相对于父元素的margin距离*/
+        }
+
+            .inputs .sign-input {
+                padding-bottom: 20px; /*登陆栏中两行间的距离*/
+            }
+
+                .inputs .sign-input input {
+                    width: 170px;  /*输入框的长度*/
+                    border: 1px #ccc solid;  /*框的设置*/
+                    color: #868686;
+                    font-size: 16px;
+                    padding: 2px;  /*输入框中字体与边框的间距*/
+                    -moz-border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -khtml-border-radius: 10px;
+                    -border-radius: 10px;    /*圆角*/
+                    outline: none;  /*outline（轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用*/
+                }
+
+        .btn {
+            background: url("../images/login_btn.png") no-repeat -111px 0;
+            width: 111px;
+            height: 36px; /*图片放置区域大小，如果比图片小，则图片会被遮挡多余的*/
+            border: 0;
+            text-align: center;
+            line-height: 20px;  /*line-height只影响行内元素，并不能直接应用于块级元素。*/
+            color: #0C4E7C;
+            cursor: pointer;
+            margin-left: 14px;
+        }
+
+
+        .login-state-trigger {  /*整个状态按钮设置*/
+            cursor: pointer;
+            display: block;
+            float: left;
+            height: 16px;
+            overflow: hidden;  /*定义溢出元素内容区的内容会被隐藏*/
+            width: 120px;
+            margin: 40px 0 0 0;
+        }
+
+        .login-state-trigger2 {
+            margin: 10px 0 0 20px;
+        }
+
+        .login-state-down {  /*倒三角所在位置*/
+            background: url("../images/ptlogin.png") no-repeat scroll 0 -22px transparent; /*背景透明*/
+            float: left;
+            height: 6px;
+            margin-top: 5px;
+            overflow: hidden;
+            text-indent: -999em;  /*文本块中首行文本的缩进，使“下”这个字消失*/
+            width: 7px;
+        }
+
+        .login-state-show {  /*状态图标所在位置*/
+            float: left;
+            height: 14px;
+            overflow: hidden;
+            text-indent: -999em;   /*文本块中首行文本的缩进，使“状态”这两字消失*/
+            width: 14px;
+            margin: 1px 4px 0 0;
+        }
+
+        .login-state-txt {   /*状态名称*/
+            float: left;
+            margin-left: 5px;
+            font-size: 12px;
+            >line-height:18px!important; /*>和!important将此句配置成最高优先级*/
+        }
+
+        .login-state .callme {
+            background: url("../images/ptlogin.png") -72px 0 no-repeat;
+        }
+
+        .login-state .online {
+            background: url("../images/ptlogin.png") 0 0 no-repeat;
+        }
+
+        .login-state .away {
+            background: url("../images/ptlogin.png") -18px 0 no-repeat;
+        }
+
+        .login-state .busy {
+            background: url("../images/ptlogin.png") -36px 0 no-repeat;
+        }
+
+        .login-state .silent {
+            background: url("../images/ptlogin.png") -108px 0 no-repeat;
+        }
+
+        .login-state .hidden {
+            background: url("../images/ptlogin.png") -54px 0 no-repeat;
+        }
+
+        .statePanel {
+            display: none;
+            position: absolute;
+            right: 68px;
+            top: 193px;
+            z-index: 10;
+            margin: 0;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #ccc #6a6a6a #666 #cdcdcd;
+            padding: 0;
+            width: 100px;
+            height: 133px;
+            overflow: hidden;
+            background: white;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+            .statePanel .statePanel_li {
+                display: block;
+                float: left;
+                margin: 0;
+                padding: 3px 0;
+                width: 100px;
+                height: 16px;
+                line-height: 16px;
+                overflow: hidden;
+                zoom: 1;
+                cursor: pointer;
+            }
+
+        .stateSelect_icon {
+            float: left;
+            margin: 2px 0 0 5px;
+            width: 14px;
+            height: 14px;
+            overflow: hidden;
+        }
+
+        .stateSelect_text {
+            margin: 0 0 0 28px;
+        }
+
+        .bottomDiv {
+            margin-left: 70px;
+        }
+
+        .ui_boxyClose{width:28px;height:28px;position:absolute;top:-10px;right:-10px;cursor:pointer;background:url('../images/boxy_btn.png') no-repeat;z-index:1}.ie6_0 .ui_boxyClose{background:0;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='boxy_btn.png',sizingMethod='scale')}

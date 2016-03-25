@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<!--需要使用符合 XML 规范的 XHTML 文档，则应该在文档中的<html> 标签中至少使用一个 xmlns 属性，以指定整个文档所使用的主要命名空间-->
+
+<head>
+    <title>webQQ</title>
+    <link href="css/main.css" rel="stylesheet" /> <!--链接的文件位置名称和类型(样式表)-->
+    <script src="js/drag.js"></script> <!--链接的外部JavaScript文件-->
+</head>
+
+<body>
+    <div class="loginPanel" id="loginPanel">
+         <div style="position: relative; z-index: 1;">   <!--关闭按钮-->
+         <!--z-index该属性设置一个定位元素沿z轴的位置，z轴定义为垂直延伸到显示区的轴。如果为正数，则离用户更近，为负数则表示离用户更远。-->
+            <div class="ui_boxyClose" id="ui_boxyClose"></div>
+        </div>
+
+
+        <div class="login_logo_webqq"></div>
+ 
+
+        <div class="inputs">  <!--输入用户名和密码-->
+            <div class="sign-input"><span>帐　号：</span><span><input autocomplete="on" name="u" id="u" type="text" style="ime-mode: disabled" class="input01" tabindex="1" value="QQ号码或Email帐号" onFocus="if (value =='QQ号码或Email帐号'){value =''}" onBlur="if (value ==''){value='QQ号码或Email帐号';}" /></span></div>
+            <!--span起强调作用；autocomplete自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。ime-mode: disabled禁用输入法编辑器。tabindex属性规定元素的tab键控制次序(当tab键用于导航时)。onfocus 事件在对象获得焦点时发生。onblur 事件会在对象失去焦点时发生。-->
+
+            <div class="sign-input"><span>密　码：</span><span><input name="p" id="p" maxlength="16" type="password" class="input01" tabindex="2" /></span></div>
+            <!--maxlength输入字段的最大长度-->
+        </div>
+
+
+        <div class="bottomDiv">
+            <div class="btn" style="float: left"></div>
+            <div>
+                <div id="loginState" class="login-state-trigger login-state-trigger2 login-state" title="选择在线状态"> 
+                <!--鼠标放在状态框上时提示“选择在线状态”-->
+
+                    <div id="loginStateShow" class="login-state-show online">状态</div>  <!--状态框上的状态图标-->
+                    <div class="login-state-down">下</div>   <!--状态框上的倒三角-->
+                    <div class="login-state-txt" id="login2qq_state_txt">在线</div>  <!--状态框上的“在线二字”-->
+
+                    <ul id="loginStatePanel" class="statePanel login-state" style="display: none">
+                        <li id="online" class="statePanel_li">
+                            <div class="stateSelect_icon online"></div>
+                            <div class="stateSelect_text">我在线上</div>
+                        </li>
+                        <li id="callme" class="statePanel_li">
+                            <div class="stateSelect_icon callme"></div>
+                            <div class="stateSelect_text">Q我吧</div>
+                        </li>
+                        <li id="away" class="statePanel_li">
+                            <div class="stateSelect_icon away"></div>
+                            <div class="stateSelect_text">离开</div>
+                        </li>
+                        <li id="busy" class="statePanel_li">
+                            <div class="stateSelect_icon busy"></div>
+                            <div class="stateSelect_text">忙碌</div>
+                        </li>
+                        <li id="silent" class="statePanel_li">
+                            <div class="stateSelect_icon silent"></div>
+                            <div class="stateSelect_text">请勿打扰</div>
+                        </li>
+                        <li id="hidden" class="statePanel_li">
+                            <div class="stateSelect_icon hidden"></div>
+                            <div class="stateSelect_text">隐身</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
